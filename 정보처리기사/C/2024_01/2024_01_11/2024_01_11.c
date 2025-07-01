@@ -1,13 +1,10 @@
 #include <stdio.h>
- 
- 
+  
 typedef struct{
     int accNum;
     double bal;
 }BankAcc;
- 
- 
- 
+  
 double sim_pow(double base, int year){
     int i;
     double r = 1.0;
@@ -17,16 +14,12 @@ double sim_pow(double base, int year){
     }
     return r;
 } 
- 
- 
- 
+  
 void initAcc(BankAcc *acc, int x, double y){
     acc -> accNum = x;
     acc -> bal = y;
 }
- 
- 
- 
+  
 void xxx(BankAcc *acc, double *en){
     if (*en > 0 && *en < acc -> bal) {
         acc -> bal = acc -> bal-*en;
@@ -34,13 +27,10 @@ void xxx(BankAcc *acc, double *en){
         acc -> bal = acc -> bal+*en;
     }
 }
- 
- 
- 
+  
 void yyy(BankAcc *acc){
     acc -> bal = acc -> bal * sim_pow((1+0.1),3);
 }
- 
  
 int main(){
  
